@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
       #clears session[:name] if it was set
       if session[:name].present?
         session.delete :name
+      end 
+      redirect_to login_path
     end 
     
 end
