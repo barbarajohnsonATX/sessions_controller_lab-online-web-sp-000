@@ -2,10 +2,7 @@
 <p>Find me in app/views/sessions/new.html.erb</p>
 <h2>Log in</h2>
  
-    <%= form_for(:session, url: login_path) do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-
-      <%= f.submit "Log in"" %>
-    <% end %>
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+  <input name=name>
+  <input type=submit value='login'>
+<% end %>
